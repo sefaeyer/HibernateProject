@@ -25,13 +25,13 @@
         <property name = "hibernate.dialect">org.hibernate.dialect.PostgreSQL9Dialect</property>
 
         <!-- ddl.auto create ise uygulama her çalıştırıldığında schema yeniden oluşturulur.
-             update: tablolar silinmez değişiklik var ise güncellenir.
-             create : Mevcut veritabanını tamamen siler ve Hibernate tarafından tanımlanan tabloları oluşturur.
+           -update: tablolar silinmez değişiklik var ise güncellenir.
+           -create : Mevcut veritabanını tamamen siler ve Hibernate tarafından tanımlanan tabloları oluşturur.
                Bu seçenek, her seferinde veritabanını yeniden oluşturur, bu nedenle mevcut veriler kaybolur.
                Genellikle test veya geliştirme aşamasında kullanılır.
-             create-drop: Bu seçenek, uygulama başladığında veritabanını oluşturur ve uygulama sonlandığında
+           -create-drop: Bu seçenek, uygulama başladığında veritabanını oluşturur ve uygulama sonlandığında
                veritabanını tamamen siler.
-             validate: tablolari validate yapıyor. eksiklik varsa hata olusturur
+           -validate: tablolari validate yapıyor. eksiklik varsa hata olusturur
 
          -->
 
