@@ -47,12 +47,21 @@ public class RunnerFetch04 {
 
         //!!! TASK : bütün öğrenciler ve varsa bu ogrencilerin kitablarini da getirelim
 
-        String hqlQuery2 = "";
+//        String hqlQuery2 = "SELECT s.name,d.name FROM Student04 s LEFT JOIN FETCH Diary04 d ON s.id=d.student";
+//        List<Object[]> resultList2 = session.createQuery(hqlQuery2).getResultList();
+//        resultList2.forEach(t->{
+//            System.out.println(Arrays.toString(t));
+//        });
 
 
 
 
-
+        // TASK : butun ogrenci ve diary bilgilerini getiriyoruz
+        String hqlQuery3 = "SELECT s.name,d.name FROM Student04 s FULL JOIN FETCH Diary04 d ON s.id=d.student";
+        List<Object[]> resultList3 = session.createQuery(hqlQuery3).getResultList();
+        resultList3.forEach(t->{
+            System.out.println(Arrays.toString(t));
+        });
 
 
 
