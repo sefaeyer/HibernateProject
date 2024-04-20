@@ -41,6 +41,14 @@
 
         <property name="format_sql">true</property>
 
+        <!--2nd Level Cache ve Query Cache aktif hale getirildi  -->
+        <property name="hibernate.cache.use_second_level_cache">true</property>
+        <property name="hibernate.cache.use_query_cache">true</property>
+        <!-- pom'a eklenen ehcache ve jcache kutuphanelerimi konfigurasyona dahil ettim  -->
+        <property name="hibernate.cache.region.factory_class">org.hibernate.cache.jcache.internal.JCacheRegionFactory</property>
+        <property name="hibernate.javax.cache.provider">org.ehcache.jsr107.EhcacheCachingProvider</property>
+
+
     </session-factory>
 
 </hibernate-configuration>
